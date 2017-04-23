@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC5CA4571E9AD81100C8964C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5CA4561E9AD81100C8964C /* AppDelegate.swift */; };
+		DC5CA45C1E9AD81100C8964C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5CA45A1E9AD81100C8964C /* Main.storyboard */; };
+		DC5CA45F1E9AD81100C8964C /* InterportMobileApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC5CA45D1E9AD81100C8964C /* InterportMobileApp.xcdatamodeld */; };
+		DC5CA4611E9AD81100C8964C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5CA4601E9AD81100C8964C /* Assets.xcassets */; };
+		DC5CA4641E9AD81100C8964C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5CA4621E9AD81100C8964C /* LaunchScreen.storyboard */; };
+		DC5CA46C1E9AD97500C8964C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5CA46B1E9AD97500C8964C /* HomeViewController.swift */; };
+		DC5CA46E1E9ADAFA00C8964C /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5CA46D1E9ADAFA00C8964C /* ScannerViewController.swift */; };
+		DC5CA4741E9DA29300C8964C /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5CA4731E9DA29300C8964C /* ReportViewController.swift */; };
+		DC5CA4761E9DAF9F00C8964C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5CA4751E9DAF9F00C8964C /* Model.swift */; };
+		DC8B3D061EA43CD200D6FB47 /* DetailReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B3D051EA43CD200D6FB47 /* DetailReportViewController.swift */; };
+		DC8B3D081EA4477100D6FB47 /* AddReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8B3D071EA4477100D6FB47 /* AddReportViewController.swift */; };
+		E21B8F911EA3EBCD00BCA8C0 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21B8F901EA3EBCD00BCA8C0 /* ItemDetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC5CA4531E9AD81100C8964C /* InterportMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterportMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5CA4561E9AD81100C8964C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC5CA45B1E9AD81100C8964C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC5CA45E1E9AD81100C8964C /* InterportMobileApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InterportMobileApp.xcdatamodel; sourceTree = "<group>"; };
+		DC5CA4601E9AD81100C8964C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC5CA4631E9AD81100C8964C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC5CA4651E9AD81100C8964C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5CA46B1E9AD97500C8964C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC5CA46D1E9ADAFA00C8964C /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		DC5CA4731E9DA29300C8964C /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		DC5CA4751E9DAF9F00C8964C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DC8B3D051EA43CD200D6FB47 /* DetailReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailReportViewController.swift; sourceTree = "<group>"; };
+		DC8B3D071EA4477100D6FB47 /* AddReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportViewController.swift; sourceTree = "<group>"; };
+		E21B8F901EA3EBCD00BCA8C0 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC5CA4501E9AD81100C8964C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC5CA44A1E9AD81100C8964C = {
+			isa = PBXGroup;
+			children = (
+				DC5CA4551E9AD81100C8964C /* InterportMobileApp */,
+				DC5CA4541E9AD81100C8964C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC5CA4541E9AD81100C8964C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC5CA4531E9AD81100C8964C /* InterportMobileApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC5CA4551E9AD81100C8964C /* InterportMobileApp */ = {
+			isa = PBXGroup;
+			children = (
+				DC5CA4561E9AD81100C8964C /* AppDelegate.swift */,
+				DC5CA45A1E9AD81100C8964C /* Main.storyboard */,
+				E21B8F901EA3EBCD00BCA8C0 /* ItemDetailsViewController.swift */,
+				DC5CA4731E9DA29300C8964C /* ReportViewController.swift */,
+				DC5CA46D1E9ADAFA00C8964C /* ScannerViewController.swift */,
+				DC5CA46B1E9AD97500C8964C /* HomeViewController.swift */,
+				DC5CA4601E9AD81100C8964C /* Assets.xcassets */,
+				DC5CA4621E9AD81100C8964C /* LaunchScreen.storyboard */,
+				DC5CA4651E9AD81100C8964C /* Info.plist */,
+				DC5CA45D1E9AD81100C8964C /* InterportMobileApp.xcdatamodeld */,
+				DC5CA4751E9DAF9F00C8964C /* Model.swift */,
+				DC8B3D051EA43CD200D6FB47 /* DetailReportViewController.swift */,
+				DC8B3D071EA4477100D6FB47 /* AddReportViewController.swift */,
+			);
+			name = InterportMobileApp;
+			path = "Group Project";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC5CA4521E9AD81100C8964C /* InterportMobileApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC5CA4681E9AD81100C8964C /* Build configuration list for PBXNativeTarget "InterportMobileApp" */;
+			buildPhases = (
+				DC5CA44F1E9AD81100C8964C /* Sources */,
+				DC5CA4501E9AD81100C8964C /* Frameworks */,
+				DC5CA4511E9AD81100C8964C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InterportMobileApp;
+			productName = "Group Project";
+			productReference = DC5CA4531E9AD81100C8964C /* InterportMobileApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC5CA44B1E9AD81100C8964C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Florida International University";
+				TargetAttributes = {
+					DC5CA4521E9AD81100C8964C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DC5CA44E1E9AD81100C8964C /* Build configuration list for PBXProject "InterportMobileApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC5CA44A1E9AD81100C8964C;
+			productRefGroup = DC5CA4541E9AD81100C8964C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC5CA4521E9AD81100C8964C /* InterportMobileApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC5CA4511E9AD81100C8964C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5CA4641E9AD81100C8964C /* LaunchScreen.storyboard in Resources */,
+				DC5CA4611E9AD81100C8964C /* Assets.xcassets in Resources */,
+				DC5CA45C1E9AD81100C8964C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC5CA44F1E9AD81100C8964C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5CA45F1E9AD81100C8964C /* InterportMobileApp.xcdatamodeld in Sources */,
+				DC5CA4571E9AD81100C8964C /* AppDelegate.swift in Sources */,
+				DC8B3D061EA43CD200D6FB47 /* DetailReportViewController.swift in Sources */,
+				DC5CA46C1E9AD97500C8964C /* HomeViewController.swift in Sources */,
+				DC5CA4761E9DAF9F00C8964C /* Model.swift in Sources */,
+				DC8B3D081EA4477100D6FB47 /* AddReportViewController.swift in Sources */,
+				DC5CA4741E9DA29300C8964C /* ReportViewController.swift in Sources */,
+				E21B8F911EA3EBCD00BCA8C0 /* ItemDetailsViewController.swift in Sources */,
+				DC5CA46E1E9ADAFA00C8964C /* ScannerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC5CA45A1E9AD81100C8964C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC5CA45B1E9AD81100C8964C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC5CA4621E9AD81100C8964C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC5CA4631E9AD81100C8964C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC5CA4661E9AD81100C8964C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC5CA4671E9AD81100C8964C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC5CA4691E9AD81100C8964C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Group Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fiu.cis.InterportMobileApp;
+				PRODUCT_NAME = InterportMobileApp;
+			};
+			name = Debug;
+		};
+		DC5CA46A1E9AD81100C8964C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Group Project/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fiu.cis.InterportMobileApp;
+				PRODUCT_NAME = InterportMobileApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC5CA44E1E9AD81100C8964C /* Build configuration list for PBXProject "InterportMobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC5CA4661E9AD81100C8964C /* Debug */,
+				DC5CA4671E9AD81100C8964C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC5CA4681E9AD81100C8964C /* Build configuration list for PBXNativeTarget "InterportMobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC5CA4691E9AD81100C8964C /* Debug */,
+				DC5CA46A1E9AD81100C8964C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC5CA45D1E9AD81100C8964C /* InterportMobileApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC5CA45E1E9AD81100C8964C /* InterportMobileApp.xcdatamodel */,
+			);
+			currentVersion = DC5CA45E1E9AD81100C8964C /* InterportMobileApp.xcdatamodel */;
+			path = InterportMobileApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DC5CA44B1E9AD81100C8964C /* Project object */;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
+    <entity name="Item" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="serialNumber" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Reports" syncable="YES">
+        <attribute name="predicate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="report" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Reports" positionX="-63" positionY="9" width="128" height="75"/>
+    </elements>
+</model>
