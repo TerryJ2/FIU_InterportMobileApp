@@ -208,19 +208,38 @@
         <!--Inventory View Controller-->
         <scene sceneID="t6i-qB-U5h">
             <objects>
-                <tableViewController title="Inventory" id="yVG-7o-Kkd" userLabel="Inventory View Controller" sceneMemberID="viewController">
+                <tableViewController title="Inventory" id="yVG-7o-Kkd" userLabel="Inventory View Controller" customClass="InventoryTableViewController" customModule="InterportMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XkU-dy-hyg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="anb-Kn-rB8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inventoryCell" textLabel="Mwv-Rw-UCM" detailTextLabel="M1p-CT-3AG" style="IBUITableViewCellStyleSubtitle" id="anb-Kn-rB8">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="anb-Kn-rB8" id="JsA-ug-20c">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mwv-Rw-UCM">
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M1p-CT-3AG">
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="acO-t6-2jR" kind="show" id="VZj-Gy-ZME"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -231,7 +250,7 @@
                     <navigationItem key="navigationItem" title="Inventory" id="2g9-pv-Lo7">
                         <barButtonItem key="leftBarButtonItem" title="&lt; Home" id="L1Z-CI-mpI">
                             <connections>
-                                <segue destination="J6I-vK-Xxm" kind="show" id="DRF-jl-JxK"/>
+                                <segue destination="J6I-vK-Xxm" kind="show" identifier="inventoryItemDetail" id="DRF-jl-JxK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -239,7 +258,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMw-xv-ut6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.5" y="626.5"/>
+            <point key="canvasLocation" x="-151.5" y="512.5"/>
         </scene>
         <!--Inventory Controller-->
         <scene sceneID="g98-mL-pvd">
@@ -256,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LL1-Bq-6u0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702.5" y="626.5"/>
+            <point key="canvasLocation" x="-714.5" y="512.5"/>
         </scene>
         <!--Add New Report Controller-->
         <scene sceneID="Wwu-LK-Va3">
@@ -410,7 +429,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMR-JE-lUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399.5" y="498.5"/>
+            <point key="canvasLocation" x="875.5" y="-319.5"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="qPJ-X6-z9H">
@@ -502,9 +521,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="A4r-Du-RuU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="scanButton" destination="YwX-73-dzH" id="v87-K3-7WL"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgI-8H-uHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -597,6 +613,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="cTz-Na-9Lj"/>
         <segue reference="DRF-jl-JxK"/>
+        <segue reference="VZj-Gy-ZME"/>
         <segue reference="Cst-Su-762"/>
     </inferredMetricsTieBreakers>
 </document>
