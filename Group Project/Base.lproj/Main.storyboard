@@ -27,7 +27,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scanner" id="k6p-MP-4je"/>
+                    <navigationItem key="navigationItem" title="Scanner" id="k6p-MP-4je">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Home" id="N7C-on-kk0">
+                            <connections>
+                                <segue destination="J6I-vK-Xxm" kind="show" id="N7w-hl-f0N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="acO-t6-2jR" kind="show" identifier="segItemDetails" id="Uao-GB-Sxm"/>
@@ -35,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lb-Qt-HHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-133.5" y="-1143.5"/>
+            <point key="canvasLocation" x="-133.5" y="-1090.5"/>
         </scene>
         <!--Item Details-->
         <scene sceneID="sup-3K-lI1">
@@ -134,7 +140,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dp2-IK-aer" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TBd-9h-L8v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="393.5" y="-1143.5"/>
+            <point key="canvasLocation" x="387.5" y="-1090.5"/>
         </scene>
         <!--Reports-->
         <scene sceneID="3v3-YD-O8v">
@@ -144,9 +150,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YM0-8Z-oOO">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Back"/>
+                            <connections>
+                                <segue destination="J6I-vK-Xxm" kind="show" id="NMb-Kg-RKu"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="9o0-oC-Nla" detailTextLabel="0DW-bG-mbV" style="IBUITableViewCellStyleValue1" id="8IT-AN-iqf">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8IT-AN-iqf" id="cJC-hc-F83">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -190,6 +204,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBw-Gc-Ilb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-139.5" y="-319.5"/>
+        </scene>
+        <!--Inventory View Controller-->
+        <scene sceneID="t6i-qB-U5h">
+            <objects>
+                <tableViewController title="Inventory" id="yVG-7o-Kkd" userLabel="Inventory View Controller" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XkU-dy-hyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="anb-Kn-rB8">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="anb-Kn-rB8" id="JsA-ug-20c">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yVG-7o-Kkd" id="KIk-rN-KRK"/>
+                            <outlet property="delegate" destination="yVG-7o-Kkd" id="Fwv-b7-Xfh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Inventory" id="2g9-pv-Lo7">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Home" id="L1Z-CI-mpI">
+                            <connections>
+                                <segue destination="J6I-vK-Xxm" kind="show" id="DRF-jl-JxK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMw-xv-ut6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139.5" y="626.5"/>
+        </scene>
+        <!--Inventory Controller-->
+        <scene sceneID="g98-mL-pvd">
+            <objects>
+                <navigationController title="Inventory" automaticallyAdjustsScrollViewInsets="NO" id="eF2-2E-Sba" userLabel="Inventory Controller" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7f9-W5-RWD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yVG-7o-Kkd" kind="relationship" relationship="rootViewController" id="ryo-us-IAn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LL1-Bq-6u0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-702.5" y="626.5"/>
         </scene>
         <!--Add New Report Controller-->
         <scene sceneID="Wwu-LK-Va3">
@@ -250,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qp-tk-yH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393.5" y="-421.5"/>
+            <point key="canvasLocation" x="399.5" y="-319.5"/>
         </scene>
         <!--Detail Report View Controller-->
         <scene sceneID="5um-yQ-Iux">
@@ -261,7 +328,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="cKr-JZ-Dmy">
-                            <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Report Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmc-E9-svs">
@@ -305,7 +372,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="niU-wS-bq0" detailTextLabel="V3B-fF-4ZY" style="IBUITableViewCellStyleValue1" id="gCb-g5-Bc0">
-                                <rect key="frame" x="0.0" y="156" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gCb-g5-Bc0" id="ugP-4M-t0p">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -343,23 +410,110 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMR-JE-lUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284.5" y="306.5"/>
+            <point key="canvasLocation" x="399.5" y="498.5"/>
         </scene>
         <!--Home View Controller-->
-        <scene sceneID="GlM-rM-t8d">
+        <scene sceneID="qPJ-X6-z9H">
             <objects>
-                <viewController title="Home View Controller" id="nQN-OP-Phs" customClass="HomeViewController" customModule="Group_Project" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Home" id="FTf-tB-BJO"/>
+                <tableViewController title="Home View Controller" id="Yea-Ge-BFZ" customClass="HomeViewController" customModule="InterportMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9bE-rG-E23">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="ZTH-5g-Ozx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="361" id="3yb-9W-wIX">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="361"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3yb-9W-wIX" id="hSp-2q-ok1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Interport Logistics.png" translatesAutoresizingMaskIntoConstraints="NO" id="MEo-gu-9px">
+                                                    <rect key="frame" x="3" y="94" width="368" height="296"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="399" id="qx9-e0-TBm">
+                                        <rect key="frame" x="0.0" y="425" width="375" height="399"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qx9-e0-TBm" id="HHo-97-nY2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="2" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMS-Fy-HBc" userLabel="Inventory Button">
+                                                    <rect key="frame" x="147" y="116" width="82" height="82"/>
+                                                    <state key="normal" title="Button" image="Inventory.png"/>
+                                                    <connections>
+                                                        <segue destination="eF2-2E-Sba" kind="show" id="zPu-pH-wwI"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="3" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPC-k9-183" userLabel="Reports Button">
+                                                    <rect key="frame" x="261" y="116" width="82" height="82"/>
+                                                    <state key="normal" title="Button" image="ReportsButton.png"/>
+                                                    <connections>
+                                                        <segue destination="ZPE-Zk-e6a" kind="show" id="cTz-Na-9Lj"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="1" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwX-73-dzH">
+                                                    <rect key="frame" x="28" y="116" width="82" height="82"/>
+                                                    <state key="normal" title="Button" image="ScanButton.png"/>
+                                                    <connections>
+                                                        <action selector="buttonPress:" destination="Yea-Ge-BFZ" eventType="touchUpInside" id="JOu-Bw-yYU"/>
+                                                        <segue destination="7mf-Fa-P5q" kind="show" action="showDetailViewController:sender:" id="Cst-Su-762"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-md-OiB">
+                                                    <rect key="frame" x="49" y="206" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.058823529409999999" green="0.26274509800000001" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inventory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bot-vO-fHM">
+                                                    <rect key="frame" x="152" y="206" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.058823529409999999" green="0.26274509800000001" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reports" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyU-73-X2z">
+                                                    <rect key="frame" x="275" y="206" width="61" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.058823529411764705" green="0.2627450980392157" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interport Logistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5m-oX-JOd">
+                                                    <rect key="frame" x="117" y="8" width="140" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Yea-Ge-BFZ" id="WxO-dy-R5q"/>
+                            <outlet property="delegate" destination="Yea-Ge-BFZ" id="7gz-qt-Nnm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="A4r-Du-RuU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hhd-Q4-cjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="scanButton" destination="YwX-73-dzH" id="v87-K3-7WL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgI-8H-uHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-133.5" y="-1878.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gmP-Yt-6Ni">
             <objects>
-                <tabBarController id="2k8-xE-ua4" sceneMemberID="viewController">
+                <tabBarController id="2k8-xE-ua4" customClass="TabBarController" customModule="InterportMobileApp" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9Wa-8L-oGv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -379,7 +533,7 @@
         <!--Home-->
         <scene sceneID="77x-WU-Qbz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J6I-vK-Xxm" sceneMemberID="viewController">
+                <navigationController title="Home" automaticallyAdjustsScrollViewInsets="NO" id="J6I-vK-Xxm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="z4v-2B-W10"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="53S-cV-90S">
@@ -388,12 +542,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="nQN-OP-Phs" kind="relationship" relationship="rootViewController" id="eNe-ZP-CaU"/>
+                        <segue destination="Yea-Ge-BFZ" kind="relationship" relationship="rootViewController" id="a4q-0f-PO1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDW-3J-d8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-708.5" y="-1878.5"/>
+            <point key="canvasLocation" x="-714.5" y="-1878.5"/>
         </scene>
         <!--Scanner-->
         <scene sceneID="yZO-mW-HwK">
@@ -434,4 +588,15 @@
             <point key="canvasLocation" x="-702.5" y="-327.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Interport Logistics.png" width="468" height="522"/>
+        <image name="Inventory.png" width="218" height="218"/>
+        <image name="ReportsButton.png" width="218" height="218"/>
+        <image name="ScanButton.png" width="218" height="218"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cTz-Na-9Lj"/>
+        <segue reference="DRF-jl-JxK"/>
+        <segue reference="Cst-Su-762"/>
+    </inferredMetricsTieBreakers>
 </document>

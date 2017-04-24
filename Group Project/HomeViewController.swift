@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class HomeViewController: UITabBarController {
+class HomeViewController: UITableViewController {
     
     //var managedObjectContext: NSManagedObjectContext? = nil
     
@@ -24,5 +24,4 @@ class HomeViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
 
-    
 }
