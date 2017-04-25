@@ -59,8 +59,8 @@ class InventoryTableViewController: UITableViewController, UISearchBarDelegate
         //Filters for items that contain anything from the search text
         filteredItems = modelInstance.itemList.filter({
             (item) -> Bool in
-            let serialNumber: String = String(item.valueForKey("serialNumber")!)
-            let range = serialNumber.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            let partNumber: String = String(item.valueForKey("partNumber")!)
+            let range = partNumber.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             return range != nil
         })
         

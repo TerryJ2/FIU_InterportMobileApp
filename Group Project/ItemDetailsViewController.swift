@@ -52,6 +52,13 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
         stepper.minimumValue = 0
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        item = nil
+        hideAmount = false
+        hideDeleteButton = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
