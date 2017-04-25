@@ -281,6 +281,7 @@
                                 <segue destination="J6I-vK-Xxm" kind="show" identifier="" id="DRF-jl-JxK"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Export" id="gWx-wr-f4R"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>

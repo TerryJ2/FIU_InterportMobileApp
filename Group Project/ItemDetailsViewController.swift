@@ -69,7 +69,7 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
     
     private func deleteItem()
     {
-         let result = Model.sharedInstance.deleteItem(partNum.text!, serialNumber: serialNum.text!)
+         let result = Model.sharedInstance.deleteItem(serialNum.text!)
          if result
          {
             Model.sharedInstance.itemList.removeAtIndex(itemIndex!)

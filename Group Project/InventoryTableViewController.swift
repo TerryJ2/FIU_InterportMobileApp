@@ -56,13 +56,11 @@ class InventoryTableViewController: UITableViewController, UISearchBarDelegate
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
-        //Filters for items that contain anything from the 
-        //search text
+        //Filters for items that contain anything from the search text
         filteredItems = modelInstance.itemList.filter({
             (item) -> Bool in
             let serialNumber: String = String(item.valueForKey("serialNumber")!)
             let range = serialNumber.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            print(range)
             return range != nil
         })
         

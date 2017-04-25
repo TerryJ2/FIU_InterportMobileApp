@@ -28,6 +28,7 @@ final class Model {
         
     }
     
+    //Internal use.
     func createRandomDummyItem()
     {
         guard let appDelegate =
@@ -35,7 +36,7 @@ final class Model {
                 return
         }
         
-        var managedObjectContext = appDelegate.managedObjectContext
+        let managedObjectContext = appDelegate.managedObjectContext
         let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext: managedObjectContext)
         
         item.setValue(Int(arc4random_uniform(999999)).description, forKey: "serialNumber")
@@ -45,7 +46,7 @@ final class Model {
     }
     
     
-    //TJ
+    //Updates an existing item and saves it to the database
     func updateItem(indexSerialNumber: String, updatedSerialNumber: String, updatedPartNumber: String, updatedLocation: String) -> Bool
     {
         guard let appDelegate =
@@ -79,8 +80,8 @@ final class Model {
         return true
     }
     
-    //TJ
-    func deleteItem(partNum: String, serialNumber: String) -> Bool
+    //Deletes an item from the context
+    func deleteItem(serialNumber: String) -> Bool
      {
         guard let appDelegate =
             UIApplication.sharedApplication().delegate as? AppDelegate else {
@@ -89,7 +90,7 @@ final class Model {
         
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest =  NSFetchRequest(entityName: "Item")
-        let predicate = NSPredicate(format: "partNumber = %@ AND serialNumber = %@", argumentArray: [partNum, serialNumber])
+        let predicate = NSPredicate(format: "serialNumber = %@", serialNumber)
         fetchRequest.predicate = predicate
         
         do {
@@ -103,7 +104,7 @@ final class Model {
             }
             
         }catch{
-            print("Failed to delete item: \(partNum) | \(serialNumber)")
+            print("Failed to delete item: \(serialNumber)")
             return false
         }
         
