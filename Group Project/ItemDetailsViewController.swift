@@ -13,6 +13,9 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
     let myModel: Model = Model.sharedInstance
     
     var itemBarcode: String?
+    var itemSerialNumber: String?
+    var itemLocation: String?
+    var itemAmount: Int?
     
     @IBOutlet var partNum: UITextField!
     
@@ -33,17 +36,16 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TJ
         partNum.text = itemBarcode ?? ""
+        serialNum.text = itemSerialNumber ?? ""
+        location.text = itemLocation ?? ""
+        quantityNum.text = itemAmount?.description ?? "0"
+        stepper.value = Double(itemAmount!) ?? 0
         
         stepper.autorepeat = true
-        
         stepper.minimumValue = 0
         
-        //myModel.loadDB()
-        
-        
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,6 +82,7 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
 
     /*
     // MARK: - Navigation

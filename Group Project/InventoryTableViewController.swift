@@ -2,7 +2,7 @@
 //  InventoryTableViewController.swift
 //  InterportMobileApp
 //
-//  Created by Terry Jean on 4/24/17.
+//  Created by Terry Jean on 4/22/17.
 //  Copyright © 2017 Florida International University. All rights reserved.
 //
 
@@ -43,11 +43,17 @@ class InventoryTableViewController: UITableViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "inventoryItemDetail"
         {
-            //var detailScene = segue.destinationViewController as! ItemDetailsViewController
-            //detailScene.partNum.text = "Test"
+            let detailScene = segue.destinationViewController as! ItemDetailsViewController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let item = modelInstance.getItemByIndex(indexPath!.row)
+            
+            detailScene.itemLocation = item?.location
+            detailScene.itemAmount = item?.qty
+            detailScene.itemBarcode = item?.partNumber
+            detailScene.itemSerialNumber = item?.serialNumber
         }
     }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You pressed \(indexPath.row)")
     }
 }

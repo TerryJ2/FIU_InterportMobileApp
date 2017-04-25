@@ -50,6 +50,7 @@ final class Model {
         item.setValue(location, forKey: "location")
         item.setValue(qty, forKey: "quantity")
         
+        
         // 4
         do {
             try managedContext.save()
