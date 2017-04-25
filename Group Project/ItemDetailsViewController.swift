@@ -26,25 +26,30 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var serialNum: UITextField!
     @IBOutlet var location: UITextField!
     @IBOutlet var quantityNum: UITextField!
+    @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet var stepper: UIStepper!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Inserts the ui controls data after a segue from the inventory list
+        //Inserts the ui controls data when viewing the item detail
+        //from the inventory list
         partNum.text = itemBarcode ?? item?.partNumber ?? ""
         serialNum.text = item?.serialNumber ?? ""
         location.text = item?.location ?? ""
         quantityNum.text = item?.qty.description ?? "0"
         stepper.value = Double((item?.qty)!) ?? 0
         
+        //Hide these elements when viewing the item detail from the
+        //inventory list
         deleteItemBtn.hidden = hideDeleteButton
         quantityNum.hidden = hideAmount
         stepper.hidden = hideAmount
+        quantityLabel.hidden = hideAmount
         
         stepper.autorepeat = true
         stepper.minimumValue = 0
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,16 +69,13 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
     
     private func deleteItem()
     {
-        /*
          let result = Model.sharedInstance.deleteItem(partNum.text!, serialNumber: serialNum.text!)
          if result
          {
             Model.sharedInstance.itemList.removeAtIndex(itemIndex!)
             Model.sharedInstance.loadDB();
          }
-            */
-         print("RESULT:")
-        
+        self.performSegueWithIdentifier("unwindToScanner", sender: self)
     }
     
     
@@ -90,9 +92,26 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
         let loc: String = self.location.text!
         let qtyNum: Int = Int(self.quantityNum.text!)!
         
-        if (myModel.save(partNumber, serialNum: serialNumber, location: loc, qty: qtyNum))
+        //The following will either update the item if the View Controller was passed an item else
+        //it will create and save the item to the database
+        var result = false;
+        var alertMessage = "Item successfully updated"
+        var alertTitle = "Item Saved"
+        
+        if item != nil
         {
-            let alert = UIAlertController(title: "Item Saved", message: "Item successfully added!", preferredStyle: UIAlertControllerStyle.Alert)
+            result = Model.sharedInstance.updateItem((item?.serialNumber)!, updatedSerialNumber: serialNumber, updatedPartNumber: partNumber, updatedLocation: loc)
+            
+            alertTitle = "Item update"
+            alertMessage = "Item successfully updated!"
+            
+        }else{
+            result = myModel.save(partNumber, serialNum: serialNumber, location: loc, qty: qtyNum)
+        }
+        
+        if (result)
+        {
+            let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: {
                 action in
                 self.performSegueWithIdentifier("unwindToScanner", sender: self)
@@ -102,13 +121,7 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-    
-    func updatePressed()
-    {
-        let partNumber: String = self.partNum.text!
-        let serialNumber: String = self.serialNum.text!
-        let loc: String = self.location.text!
-    }
+
 
     /*
     // MARK: - Navigation

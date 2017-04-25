@@ -31,10 +31,10 @@ class InventoryTableViewController: UITableViewController, UISearchBarDelegate
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Rows \(filteredItems.count)")
         return searchActive ? filteredItems.count : modelInstance.itemList.count;
     }
     
@@ -56,6 +56,8 @@ class InventoryTableViewController: UITableViewController, UISearchBarDelegate
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
+        //Filters for items that contain anything from the 
+        //search text
         filteredItems = modelInstance.itemList.filter({
             (item) -> Bool in
             let serialNumber: String = String(item.valueForKey("serialNumber")!)
@@ -75,13 +77,13 @@ class InventoryTableViewController: UITableViewController, UISearchBarDelegate
         var serialNumber:String?
         var location:String?
         
+        //While a search is currently active, only show elements
+        //from the filtered list else show all of the items
         if searchActive
         {
             let filteredItem = filteredItems[indexPath.row]
             serialNumber = String(filteredItem.valueForKey("serialNumber")!)
             location =  String(filteredItem.valueForKey("location")!)
-
-            print("Stil active")
         }else
         {
             let item = modelInstance.getItemByIndex(indexPath.row)
@@ -96,6 +98,9 @@ class InventoryTableViewController: UITableViewController, UISearchBarDelegate
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        //Sets up the item details for the ItemDetailsViewController by grabbing
+        //the current item from the index
         if segue.identifier == "inventoryItemDetail"
         {
             let detailScene = segue.destinationViewController as! ItemDetailsViewController

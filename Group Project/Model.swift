@@ -46,7 +46,7 @@ final class Model {
     
     
     //TJ
-    func updateItem(indexSerialNumber: String, updatedSerialNumber: String) -> Bool
+    func updateItem(indexSerialNumber: String, updatedSerialNumber: String, updatedPartNumber: String, updatedLocation: String) -> Bool
     {
         guard let appDelegate =
             UIApplication.sharedApplication().delegate as? AppDelegate else {
@@ -63,7 +63,10 @@ final class Model {
             let result = try managedContext.executeFetchRequest(fetchRequest)
             if let foundItem = result.first as! NSManagedObject?
             {
-                foundItem.setValue("", forKey: "serialNumber")
+                foundItem.setValue(updatedSerialNumber, forKey: "serialNumber")
+                foundItem.setValue(updatedPartNumber, forKey: "partNumber")
+                foundItem.setValue(updatedLocation, forKey: "location")
+
                 try managedContext.save()
                 print("Successfully updated item \(foundItem)")
             }

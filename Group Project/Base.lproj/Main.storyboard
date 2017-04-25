@@ -151,7 +151,9 @@
                         <outlet property="deleteItemBtn" destination="QpM-k8-JYk" id="xgg-2Z-Wrp"/>
                         <outlet property="location" destination="2L5-fy-rfF" id="Bve-ee-9P1"/>
                         <outlet property="partNum" destination="f5v-OK-FrU" id="pOS-rW-gsh"/>
+                        <outlet property="quantityLabel" destination="HTd-lG-Q2X" id="IlD-dT-mYl"/>
                         <outlet property="quantityNum" destination="DoL-zI-VBE" id="PfV-ar-Rea"/>
+                        <outlet property="saveButton" destination="hFl-dn-l08" id="klW-KB-8V4"/>
                         <outlet property="serialNum" destination="PaV-Y5-6Mu" id="4K2-23-1Dc"/>
                         <outlet property="stepper" destination="oCg-VW-s28" id="gPE-Mz-4HR"/>
                         <segue destination="TBd-9h-L8v" kind="unwind" identifier="unwindToScanner" unwindAction="prepareForUnwind:" id="9rY-jn-keG"/>
@@ -258,7 +260,7 @@
                                             <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -622,7 +624,7 @@
         <image name="ScanButton.png" width="218" height="218"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N7w-hl-f0N"/>
-        <segue reference="Uao-GB-Sxm"/>
+        <segue reference="DRF-jl-JxK"/>
+        <segue reference="VZj-Gy-ZME"/>
     </inferredMetricsTieBreakers>
 </document>

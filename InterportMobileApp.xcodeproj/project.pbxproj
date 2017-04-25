@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3884C4E01EAD7E0200093BF3 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884C4DF1EAD7E0200093BF3 /* HomeNavigationController.swift */; };
-		3884C4E31EAD867B00093BF3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3884C4E21EAD867B00093BF3 /* TabBarController.swift */; };
 		3884C4E61EAD8B2100093BF3 /* Interport Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 3884C4E51EAD8B2100093BF3 /* Interport Ball.png */; };
 		3884C4EA1EAD8EC100093BF3 /* Interport Logistics Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3884C4E91EAD8EC100093BF3 /* Interport Logistics Logo.png */; };
 		3884C4EC1EAD917700093BF3 /* Interport Logistics.png in Resources */ = {isa = PBXBuildFile; fileRef = 3884C4EB1EAD917700093BF3 /* Interport Logistics.png */; };
@@ -34,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		3884C4DF1EAD7E0200093BF3 /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
-		3884C4E21EAD867B00093BF3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3884C4E51EAD8B2100093BF3 /* Interport Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Interport Ball.png"; sourceTree = "<group>"; };
 		3884C4E91EAD8EC100093BF3 /* Interport Logistics Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Interport Logistics Logo.png"; sourceTree = "<group>"; };
 		3884C4EB1EAD917700093BF3 /* Interport Logistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Interport Logistics.png"; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 		3884C4DC1EAD745400093BF3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3884C4E11EAD865D00093BF3 /* Tab Bar */,
 				3884C4DE1EAD7DE500093BF3 /* Navigation */,
 				3884C4DD1EAD7DE000093BF3 /* Views */,
 			);
@@ -109,14 +106,6 @@
 				3884C4DF1EAD7E0200093BF3 /* HomeNavigationController.swift */,
 			);
 			name = Navigation;
-			sourceTree = "<group>";
-		};
-		3884C4E11EAD865D00093BF3 /* Tab Bar */ = {
-			isa = PBXGroup;
-			children = (
-				3884C4E21EAD867B00093BF3 /* TabBarController.swift */,
-			);
-			name = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		3884C4E71EAD8B2900093BF3 /* Assets */ = {
@@ -266,7 +255,6 @@
 				3884C4E01EAD7E0200093BF3 /* HomeNavigationController.swift in Sources */,
 				DC5CA45F1E9AD81100C8964C /* InterportMobileApp.xcdatamodeld in Sources */,
 				3884C4FD1EAE3BFA00093BF3 /* InventoryTableViewController.swift in Sources */,
-				3884C4E31EAD867B00093BF3 /* TabBarController.swift in Sources */,
 				DC5CA4571E9AD81100C8964C /* AppDelegate.swift in Sources */,
 				DC8B3D061EA43CD200D6FB47 /* DetailReportViewController.swift in Sources */,
 				DC5CA46C1E9AD97500C8964C /* HomeViewController.swift in Sources */,
