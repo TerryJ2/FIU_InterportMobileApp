@@ -31,18 +31,17 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Inserts the ui controls data after a segue from the inventory
-        //list
+        //Inserts the ui controls data after a segue from the inventory list
         partNum.text = itemBarcode ?? item?.partNumber ?? ""
         serialNum.text = item?.serialNumber ?? ""
         location.text = item?.location ?? ""
         quantityNum.text = item?.qty.description ?? "0"
         stepper.value = Double((item?.qty)!) ?? 0
         
-        
         deleteItemBtn.hidden = hideDeleteButton
         quantityNum.hidden = hideAmount
         stepper.hidden = hideAmount
+        
         stepper.autorepeat = true
         stepper.minimumValue = 0
         
@@ -104,6 +103,12 @@ class ItemDetailsViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func updatePressed()
+    {
+        let partNumber: String = self.partNum.text!
+        let serialNumber: String = self.serialNum.text!
+        let loc: String = self.location.text!
+    }
 
     /*
     // MARK: - Navigation

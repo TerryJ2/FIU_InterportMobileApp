@@ -44,6 +44,38 @@ final class Model {
         item.setValue(1, forKey: "quantity")
     }
     
+    
+    //TJ
+    func updateItem(indexSerialNumber: String, updatedSerialNumber: String) -> Bool
+    {
+        guard let appDelegate =
+            UIApplication.sharedApplication().delegate as? AppDelegate else {
+                return false
+        }
+        
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest =  NSFetchRequest(entityName: "Item")
+        let predicate = NSPredicate(format: "serialNumber = %@", indexSerialNumber)
+        fetchRequest.predicate = predicate
+        
+        do {
+            
+            let result = try managedContext.executeFetchRequest(fetchRequest)
+            if let foundItem = result.first as! NSManagedObject?
+            {
+                foundItem.setValue("", forKey: "serialNumber")
+                try managedContext.save()
+                print("Successfully updated item \(foundItem)")
+            }
+            
+        }catch{
+            print("Failed to update item: \(indexSerialNumber)")
+            return false
+        }
+        
+        return true
+    }
+    
     //TJ
     func deleteItem(partNum: String, serialNumber: String) -> Bool
      {
