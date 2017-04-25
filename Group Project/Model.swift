@@ -28,6 +28,53 @@ final class Model {
         
     }
     
+    func createRandomDummyItem()
+    {
+        guard let appDelegate =
+            UIApplication.sharedApplication().delegate as? AppDelegate else {
+                return
+        }
+        
+        var managedObjectContext = appDelegate.managedObjectContext
+        let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext: managedObjectContext)
+        
+        item.setValue(Int(arc4random_uniform(999999)).description, forKey: "serialNumber")
+        item.setValue("PT" + Int(arc4random_uniform(5000)).description, forKey: "partNumber")
+        item.setValue("Warehouse " + Int(arc4random_uniform(10)).description, forKey: "location")
+        item.setValue(1, forKey: "quantity")
+    }
+    
+    //TJ
+    func deleteItem(partNum: String, serialNumber: String) -> Bool
+     {
+        guard let appDelegate =
+            UIApplication.sharedApplication().delegate as? AppDelegate else {
+                return false
+        }
+        
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest =  NSFetchRequest(entityName: "Item")
+        let predicate = NSPredicate(format: "partNumber = %@ AND serialNumber = %@", argumentArray: [partNum, serialNumber])
+        fetchRequest.predicate = predicate
+        
+        do {
+            
+            let result = try managedContext.executeFetchRequest(fetchRequest)
+            if let deletedItem = result.first as! NSManagedObject?
+            {
+                managedContext.deleteObject(deletedItem)
+                try managedContext.save()
+                print("Successfully deleted item \(deletedItem)")
+            }
+            
+        }catch{
+            print("Failed to delete item: \(partNum) | \(serialNumber)")
+            return false
+        }
+        
+        return true
+    }
+    
     func save(partNum: String, serialNum: String, location: String, qty: Int) -> Bool {
     
         guard let appDelegate =
